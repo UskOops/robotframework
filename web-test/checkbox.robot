@@ -1,5 +1,7 @@
 *** Settings ***
-Library      SeleniumLibrary
+
+#import base
+Resource       base.robot 
 
 #Test setup → happens before every test
 #test teardown → happens after every test
@@ -8,8 +10,7 @@ Test Teardown  End Session
 
 
 #variable for script
-* Variables *
-${url}    https://training-wheels-protocol.herokuapp.com/checkboxes 
+
 
 * Test Cases *
 Case 1: Acess site
@@ -22,12 +23,4 @@ Case 1: Acess site
     Sleep                         3
 
 
-
-* Keywords *
-New Session
-
-    Open browser    ${url}    chrome
-
-End Session
-    Close All Browsers
 
