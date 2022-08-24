@@ -1,57 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0 (Python 3.10.6 on win32)" generated="20220824 15:44:17.851" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0 (Python 3.10.6 on win32)" generated="20220824 15:50:02.269" rpa="false" schemaversion="3">
 <suite id="s1" name="Robotframework" source="C:\Users\marco\Documents\GitHub\robotframework">
 <suite id="s1-s1" name="Web-Test" source="C:\Users\marco\Documents\GitHub\robotframework\web-test">
 <suite id="s1-s1-s1" name="Checkbox" source="C:\Users\marco\Documents\GitHub\robotframework\web-test\checkbox.robot">
 <test id="s1-s1-s1-t1" name="Case 1: Acess site" line="15">
-<kw name="New Session" type="SETUP">
+<kw name="New Session" library="base" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${url}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220824 15:44:18.281" level="INFO">Opening browser 'chrome' to base url 'https://training-wheels-protocol.herokuapp.com/checkboxes'.</msg>
-<status status="PASS" starttime="20220824 15:44:18.280" endtime="20220824 15:44:25.212"/>
+<msg timestamp="20220824 15:50:02.655" level="INFO">Opening browser 'chrome' to base url 'https://training-wheels-protocol.herokuapp.com/checkboxes'.</msg>
+<status status="PASS" starttime="20220824 15:50:02.654" endtime="20220824 15:50:10.145"/>
 </kw>
-<status status="PASS" starttime="20220824 15:44:18.278" endtime="20220824 15:44:25.212"/>
+<status status="PASS" starttime="20220824 15:50:02.653" endtime="20220824 15:50:10.145"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${url}/checkboxes</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220824 15:44:25.215" level="INFO">Opening url 'https://training-wheels-protocol.herokuapp.com/checkboxes/checkboxes'</msg>
-<status status="PASS" starttime="20220824 15:44:25.214" endtime="20220824 15:44:25.454"/>
+<msg timestamp="20220824 15:50:10.147" level="INFO">Opening url 'https://training-wheels-protocol.herokuapp.com/checkboxes/checkboxes'</msg>
+<status status="PASS" starttime="20220824 15:50:10.146" endtime="20220824 15:50:10.452"/>
 </kw>
 <kw name="Select Checkbox" library="SeleniumLibrary">
 <arg>css:input[value='iron-man']</arg>
 <doc>Selects the checkbox identified by ``locator``.</doc>
-<msg timestamp="20220824 15:44:25.456" level="INFO">Selecting checkbox 'css:input[value='iron-man']'.</msg>
-<msg timestamp="20220824 15:44:25.575" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20220824 15:44:25.578" level="FAIL">Checkbox with locator 'css:input[value='iron-man']' not found.</msg>
-<status status="FAIL" starttime="20220824 15:44:25.455" endtime="20220824 15:44:25.583"/>
+<msg timestamp="20220824 15:50:10.456" level="INFO">Selecting checkbox 'css:input[value='iron-man']'.</msg>
+<msg timestamp="20220824 15:50:10.590" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-12.png"&gt;&lt;img src="selenium-screenshot-12.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220824 15:50:10.593" level="FAIL">Checkbox with locator 'css:input[value='iron-man']' not found.</msg>
+<status status="FAIL" starttime="20220824 15:50:10.453" endtime="20220824 15:50:10.597"/>
 </kw>
 <kw name="Checkbox Should Not Be Selected" library="SeleniumLibrary">
 <arg>css:input[value='iron-man']</arg>
 <doc>Verifies checkbox ``locator`` is not selected/checked.</doc>
-<status status="NOT RUN" starttime="20220824 15:44:25.584" endtime="20220824 15:44:25.585"/>
+<status status="NOT RUN" starttime="20220824 15:50:10.599" endtime="20220824 15:50:10.599"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20220824 15:44:25.585" endtime="20220824 15:44:25.586"/>
+<status status="NOT RUN" starttime="20220824 15:50:10.600" endtime="20220824 15:50:10.600"/>
 </kw>
-<kw name="End Session" type="TEARDOWN">
+<kw name="End Session" library="base" type="TEARDOWN">
 <kw name="Close All Browsers" library="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220824 15:44:25.587" endtime="20220824 15:44:27.802"/>
+<status status="PASS" starttime="20220824 15:50:10.602" endtime="20220824 15:50:12.963"/>
 </kw>
-<status status="PASS" starttime="20220824 15:44:25.587" endtime="20220824 15:44:27.803"/>
+<status status="PASS" starttime="20220824 15:50:10.601" endtime="20220824 15:50:12.964"/>
 </kw>
-<status status="FAIL" starttime="20220824 15:44:18.275" endtime="20220824 15:44:27.804">Checkbox with locator 'css:input[value='iron-man']' not found.</status>
+<status status="FAIL" starttime="20220824 15:50:02.650" endtime="20220824 15:50:12.964">Checkbox with locator 'css:input[value='iron-man']' not found.</status>
 </test>
-<status status="FAIL" starttime="20220824 15:44:17.930" endtime="20220824 15:44:27.809"/>
+<status status="FAIL" starttime="20220824 15:50:02.318" endtime="20220824 15:50:12.968"/>
 </suite>
-<status status="FAIL" starttime="20220824 15:44:17.924" endtime="20220824 15:44:27.817"/>
+<status status="FAIL" starttime="20220824 15:50:02.312" endtime="20220824 15:50:12.974"/>
 </suite>
-<status status="FAIL" starttime="20220824 15:44:17.859" endtime="20220824 15:44:27.821"/>
+<status status="FAIL" starttime="20220824 15:50:02.275" endtime="20220824 15:50:12.978"/>
 </suite>
 <statistics>
 <total>
