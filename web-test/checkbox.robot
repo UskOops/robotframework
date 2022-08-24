@@ -13,13 +13,13 @@ Test Teardown  End Session
 
 
 * Test Cases *
-Case 1: Acess site
+Case 2: Acess site
 #tag me permite rodar somente um teste
     #[Tags]    testeunico 
     Go To                         ${url}/checkboxes
     Select Checkbox               css:input[value='iron-man']
     #Click Element                 id:thor if i use id
-    Checkbox Should Not Be Selected   css:input[value='iron-man']
+    Checkbox Should Be Selected   css:input[value='iron-man']
     Sleep                         3
 
 
