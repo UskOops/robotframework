@@ -2,7 +2,7 @@
 Library      SeleniumLibrary
 
 * Variables *
-${url}    https://training-wheels-protocol.herokuapp.com/checkboxes 
+${url}    https://training-wheels-protocol.herokuapp.com
 
 * Keywords *
 New Session
