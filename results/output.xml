@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0 (Python 3.10.6 on win32)" generated="20220824 14:41:21.903" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0 (Python 3.10.6 on win32)" generated="20220824 15:20:52.253" rpa="false" schemaversion="3">
 <suite id="s1" name="Robotframework" source="C:\Users\marco\Documents\GitHub\robotframework">
 <suite id="s1-s1" name="Web-Test" source="C:\Users\marco\Documents\GitHub\robotframework\web-test">
 <suite id="s1-s1-s1" name="Checkbox" source="C:\Users\marco\Documents\GitHub\robotframework\web-test\checkbox.robot">
@@ -8,37 +8,66 @@
 <arg>${url}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220824 14:41:22.382" level="INFO">Opening browser 'chrome' to base url 'https://training-wheels-protocol.herokuapp.com/checkboxes'.</msg>
-<status status="PASS" starttime="20220824 14:41:22.381" endtime="20220824 14:41:30.104"/>
+<msg timestamp="20220824 15:20:52.630" level="INFO">Opening browser 'chrome' to base url 'https://training-wheels-protocol.herokuapp.com/checkboxes'.</msg>
+<status status="PASS" starttime="20220824 15:20:52.628" endtime="20220824 15:20:59.758"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${url}/checkboxes</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220824 14:41:30.108" level="INFO">Opening url 'https://training-wheels-protocol.herokuapp.com/checkboxes/checkboxes'</msg>
-<status status="PASS" starttime="20220824 14:41:30.106" endtime="20220824 14:41:30.350"/>
+<msg timestamp="20220824 15:20:59.760" level="INFO">Opening url 'https://training-wheels-protocol.herokuapp.com/checkboxes/checkboxes'</msg>
+<status status="PASS" starttime="20220824 15:20:59.759" endtime="20220824 15:21:00.084"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220824 15:21:01.101" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220824 15:21:00.086" endtime="20220824 15:21:01.104"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>checkboxes &gt; input[type=checkbox]:nth-child(3)</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<msg timestamp="20220824 15:21:01.106" level="INFO">Selecting checkbox 'checkboxes &gt; input[type=checkbox]:nth-child(3)'.</msg>
+<msg timestamp="20220824 15:21:01.226" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220824 15:21:01.229" level="FAIL">Checkbox with locator 'checkboxes &gt; input[type=checkbox]:nth-child(3)' not found.</msg>
+<status status="FAIL" starttime="20220824 15:21:01.105" endtime="20220824 15:21:01.234"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:thor</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220824 15:21:01.235" endtime="20220824 15:21:01.236"/>
+</kw>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>id:thor</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<status status="NOT RUN" starttime="20220824 15:21:01.237" endtime="20220824 15:21:01.237"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220824 15:21:01.238" endtime="20220824 15:21:01.239"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220824 14:41:30.352" endtime="20220824 14:41:32.603"/>
+<status status="NOT RUN" starttime="20220824 15:21:01.239" endtime="20220824 15:21:01.240"/>
 </kw>
-<status status="PASS" starttime="20220824 14:41:22.379" endtime="20220824 14:41:32.604"/>
+<status status="FAIL" starttime="20220824 15:20:52.625" endtime="20220824 15:21:01.241">Checkbox with locator 'checkboxes &gt; input[type=checkbox]:nth-child(3)' not found.</status>
 </test>
-<status status="PASS" starttime="20220824 14:41:22.062" endtime="20220824 14:41:32.627"/>
+<status status="FAIL" starttime="20220824 15:20:52.305" endtime="20220824 15:21:01.245"/>
 </suite>
-<status status="PASS" starttime="20220824 14:41:22.055" endtime="20220824 14:41:32.632"/>
+<status status="FAIL" starttime="20220824 15:20:52.299" endtime="20220824 15:21:01.251"/>
 </suite>
-<status status="PASS" starttime="20220824 14:41:22.024" endtime="20220824 14:41:32.636"/>
+<status status="FAIL" starttime="20220824 15:20:52.260" endtime="20220824 15:21:01.255"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Robotframework">Robotframework</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="Web-Test">Robotframework.Web-Test</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Checkbox">Robotframework.Web-Test.Checkbox</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Robotframework">Robotframework</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Web-Test">Robotframework.Web-Test</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Checkbox">Robotframework.Web-Test.Checkbox</stat>
 </suite>
 </statistics>
 <errors>

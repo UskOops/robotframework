@@ -1,36 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0 (Python 3.10.6 on win32)" generated="20220823 15:17:22.218" rpa="false" schemaversion="3">
-<suite id="s1" name="Roboselenium" source="C:\Users\marco\Documents\GitHub\robotframework\web-test\roboselenium.robot">
-<test id="s1-t1" name="Case 1: Acess site" line="5">
+<robot generator="Robot 5.0 (Python 3.10.6 on win32)" generated="20220824 15:25:42.301" rpa="false" schemaversion="3">
+<suite id="s1" name="Checkbox" source="C:\Users\marco\Documents\GitHub\robotframework\web-test\checkbox.robot">
+<test id="s1-t1" name="Case 1: Acess site" line="10">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>https://training-wheels-protocol.herokuapp.com/</arg>
+<arg>${url}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220823 15:17:22.856" level="INFO">Opening browser 'chrome' to base url 'https://training-wheels-protocol.herokuapp.com/'.</msg>
-<status status="PASS" starttime="20220823 15:17:22.855" endtime="20220823 15:17:35.562"/>
+<msg timestamp="20220824 15:25:42.582" level="INFO">Opening browser 'chrome' to base url 'https://training-wheels-protocol.herokuapp.com/checkboxes'.</msg>
+<status status="PASS" starttime="20220824 15:25:42.582" endtime="20220824 15:25:49.337"/>
 </kw>
-<kw name="Title Should Be" library="SeleniumLibrary">
-<arg>Training Wheels Protocol</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220823 15:17:35.590" level="INFO">Page title is 'Training Wheels Protocol'.</msg>
-<status status="PASS" starttime="20220823 15:17:35.567" endtime="20220823 15:17:35.590"/>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}/checkboxes</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220824 15:25:49.338" level="INFO">Opening url 'https://training-wheels-protocol.herokuapp.com/checkboxes/checkboxes'</msg>
+<status status="PASS" starttime="20220824 15:25:49.337" endtime="20220824 15:25:49.567"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220824 15:25:50.581" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220824 15:25:49.568" endtime="20220824 15:25:50.581"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>checkboxes &gt; input[type=checkbox]:nth-child(3)</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<msg timestamp="20220824 15:25:50.582" level="INFO">Selecting checkbox 'checkboxes &gt; input[type=checkbox]:nth-child(3)'.</msg>
+<msg timestamp="20220824 15:25:50.696" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220824 15:25:50.697" level="FAIL">Checkbox with locator 'checkboxes &gt; input[type=checkbox]:nth-child(3)' not found.</msg>
+<status status="FAIL" starttime="20220824 15:25:50.582" endtime="20220824 15:25:50.700"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:thor</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220824 15:25:50.701" endtime="20220824 15:25:50.701"/>
+</kw>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>id:thor</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<status status="NOT RUN" starttime="20220824 15:25:50.702" endtime="20220824 15:25:50.702"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220824 15:25:50.702" endtime="20220824 15:25:50.702"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220823 15:17:35.591" endtime="20220823 15:17:38.030"/>
+<status status="NOT RUN" starttime="20220824 15:25:50.703" endtime="20220824 15:25:50.703"/>
 </kw>
-<status status="PASS" starttime="20220823 15:17:22.854" endtime="20220823 15:17:38.033"/>
+<status status="FAIL" starttime="20220824 15:25:42.581" endtime="20220824 15:25:50.704">Checkbox with locator 'checkboxes &gt; input[type=checkbox]:nth-child(3)' not found.</status>
 </test>
-<status status="PASS" starttime="20220823 15:17:22.221" endtime="20220823 15:17:38.035"/>
+<status status="FAIL" starttime="20220824 15:25:42.303" endtime="20220824 15:25:50.707"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Roboselenium">Roboselenium</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Checkbox">Checkbox</stat>
 </suite>
 </statistics>
 <errors>
