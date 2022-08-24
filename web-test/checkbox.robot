@@ -14,7 +14,7 @@ Case 1: Acess site
     Go To                         ${url}/checkboxes
     Select Checkbox               css:input[value='iron-man']
     #Click Element                 id:thor using id 
-    Checkbox Should Be Selected   css:input[value='iron-man']
+    Checkbox Should Not Be Selected   css:input[value='iron-man']
     Sleep                         3
     Close Browser
 
