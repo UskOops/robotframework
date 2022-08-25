@@ -3,6 +3,7 @@ Library      SeleniumLibrary
 
 * Variables *
 ${url}    https://training-wheels-protocol.herokuapp.com
+${tag}    [Tags]
 
 * Keywords *
 New Session
