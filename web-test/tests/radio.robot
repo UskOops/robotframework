@@ -10,5 +10,5 @@ Test Teardown  End Session
 Select radio button
     Go to                             ${url}/radios
     Click Element                    //*[@id="cap"]
-    Radio Button Should Be Set To    movies     cap
+    Radio Button Should Be Set To    movies     cap     #verify radio button cap ID is set to movies
     Sleep                               5
