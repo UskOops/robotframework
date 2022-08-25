@@ -1,130 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0 (Python 3.10.6 on win32)" generated="20220825 15:23:51.769" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0 (Python 3.10.6 on win32)" generated="20220825 15:42:37.617" rpa="false" schemaversion="3">
 <suite id="s1" name="Robotframework" source="C:\Users\marco\Documents\GitHub\robotframework">
 <suite id="s1-s1" name="Web-Test" source="C:\Users\marco\Documents\GitHub\robotframework\web-test">
 <suite id="s1-s1-s1" name="Tests" source="C:\Users\marco\Documents\GitHub\robotframework\web-test\tests">
-<suite id="s1-s1-s1-s1" name="Dropdown" source="C:\Users\marco\Documents\GitHub\robotframework\web-test\tests\dropdown.robot">
-<test id="s1-s1-s1-s1-t1" name="Case 4: Select dropdown item" line="10">
+<suite id="s1-s1-s1-s1" name="Tables" source="C:\Users\marco\Documents\GitHub\robotframework\web-test\tests\tables.robot">
+<test id="s1-s1-s1-s1-t1" name="Case 4: Verify the value cotains in the table" line="10">
 <kw name="New Session" library="base" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${url}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220825 15:23:52.197" level="INFO">Opening browser 'chrome' to base url 'https://training-wheels-protocol.herokuapp.com'.</msg>
-<status status="PASS" starttime="20220825 15:23:52.196" endtime="20220825 15:24:05.553"/>
+<msg timestamp="20220825 15:42:38.010" level="INFO">Opening browser 'chrome' to base url 'https://training-wheels-protocol.herokuapp.com'.</msg>
+<status status="PASS" starttime="20220825 15:42:38.010" endtime="20220825 15:42:51.067"/>
 </kw>
-<status status="PASS" starttime="20220825 15:23:52.194" endtime="20220825 15:24:05.554"/>
+<status status="PASS" starttime="20220825 15:42:38.009" endtime="20220825 15:42:51.067"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
-<arg>${url}dropdown</arg>
+<arg>${url}/tables</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220825 15:24:05.556" level="INFO">Opening url 'https://training-wheels-protocol.herokuapp.comdropdown'</msg>
-<msg timestamp="20220825 15:24:06.645" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-33.png"&gt;&lt;img src="selenium-screenshot-33.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20220825 15:24:06.648" level="FAIL">WebDriverException: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
-  (Session info: chrome=104.0.5112.102)
-Stacktrace:
-Backtrace:
-	Ordinal0 [0x003378B3+2193587]
-	Ordinal0 [0x002D0681+1771137]
-	Ordinal0 [0x001E41A8+803240]
-	Ordinal0 [0x001E0918+788760]
-	Ordinal0 [0x001D781D+751645]
-	Ordinal0 [0x001D8450+754768]
-	Ordinal0 [0x001D7A2A+752170]
-	Ordinal0 [0x001D6FAF+749487]
-	Ordinal0 [0x001D5E94+745108]
-	Ordinal0 [0x001D636D+746349]
-	Ordinal0 [0x001E5974+809332]
-	Ordinal0 [0x0023E18D+1171853]
-	Ordinal0 [0x0022D7AC+1103788]
-	Ordinal0 [0x0023DAE2+1170146]
-	Ordinal0 [0x0022D5C6+1103302]
-	Ordinal0 [0x002077E0+948192]
-	Ordinal0 [0x002086E6+952038]
-	GetHandleVerifier [0x005E0CB2+2738370]
-	GetHandleVerifier [0x005D21B8+2678216]
-	GetHandleVerifier [0x003C17AA+512954]
-	GetHandleVerifier [0x003C0856+509030]
-	Ordinal0 [0x002D743B+1799227]
-	Ordinal0 [0x002DBB68+1817448]
-	Ordinal0 [0x002DBC55+1817685]
-	Ordinal0 [0x002E5230+1856048]
-	BaseThreadInitThunk [0x7599FA29+25]
-	RtlGetAppContainerNamedObjectPath [0x774F7A9E+286]
-	RtlGetAppContainerNamedObjectPath [0x774F7A6E+238]
-</msg>
-<status status="FAIL" starttime="20220825 15:24:05.555" endtime="20220825 15:24:06.653"/>
+<msg timestamp="20220825 15:42:51.070" level="INFO">Opening url 'https://training-wheels-protocol.herokuapp.com/tables'</msg>
+<status status="PASS" starttime="20220825 15:42:51.068" endtime="20220825 15:42:51.802"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>4</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20220825 15:24:06.654" endtime="20220825 15:24:06.655"/>
+<kw name="Table Should Contain" library="SeleniumLibrary">
+<arg>//*[@id="actors"]</arg>
+<arg>1</arg>
+<arg>$ 10.000.000</arg>
+<doc>Verifies table contains text ``expected``.</doc>
+<status status="PASS" starttime="20220825 15:42:51.804" endtime="20220825 15:42:52.201"/>
 </kw>
 <kw name="End Session" library="base" type="TEARDOWN">
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20220825 15:24:06.755" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-34.png"&gt;&lt;img src="selenium-screenshot-34.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220825 15:24:06.657" endtime="20220825 15:24:06.757"/>
+<msg timestamp="20220825 15:42:52.334" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-39.png"&gt;&lt;img src="selenium-screenshot-39.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220825 15:42:52.204" endtime="20220825 15:42:52.336"/>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220825 15:24:06.758" endtime="20220825 15:24:08.945"/>
+<status status="PASS" starttime="20220825 15:42:52.336" endtime="20220825 15:42:54.584"/>
 </kw>
-<status status="PASS" starttime="20220825 15:24:06.656" endtime="20220825 15:24:08.946"/>
+<status status="PASS" starttime="20220825 15:42:52.202" endtime="20220825 15:42:54.585"/>
 </kw>
-<status status="FAIL" starttime="20220825 15:23:52.191" endtime="20220825 15:24:08.946">WebDriverException: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
-  (Session info: chrome=104.0.5112.102)
-Stacktrace:
-Backtrace:
-	Ordinal0 [0x003378B3+2193587]
-	Ordinal0 [0x002D0681+1771137]
-	Ordinal0 [0x001E41A8+803240]
-	Ordinal0 [0x001E0918+788760]
-	Ordinal0 [0x001D781D+751645]
-	Ordinal0 [0x001D8450+754768]
-	Ordinal0 [0x001D7A2A+752170]
-	Ordinal0 [0x001D6FAF+749487]
-	Ordinal0 [0x001D5E94+745108]
-	Ordinal0 [0x001D636D+746349]
-	Ordinal0 [0x001E5974+809332]
-	Ordinal0 [0x0023E18D+1171853]
-	Ordinal0 [0x0022D7AC+1103788]
-	Ordinal0 [0x0023DAE2+1170146]
-	Ordinal0 [0x0022D5C6+1103302]
-	Ordinal0 [0x002077E0+948192]
-	Ordinal0 [0x002086E6+952038]
-	GetHandleVerifier [0x005E0CB2+2738370]
-	GetHandleVerifier [0x005D21B8+2678216]
-	GetHandleVerifier [0x003C17AA+512954]
-	GetHandleVerifier [0x003C0856+509030]
-	Ordinal0 [0x002D743B+1799227]
-	Ordinal0 [0x002DBB68+1817448]
-	Ordinal0 [0x002DBC55+1817685]
-	Ordinal0 [0x002E5230+1856048]
-	BaseThreadInitThunk [0x7599FA29+25]
-	RtlGetAppContainerNamedObjectPath [0x774F7A9E+286]
-	RtlGetAppContainerNamedObjectPath [0x774F7A6E+238]
-</status>
+<status status="PASS" starttime="20220825 15:42:38.006" endtime="20220825 15:42:54.585"/>
 </test>
-<status status="FAIL" starttime="20220825 15:23:51.848" endtime="20220825 15:24:08.954"/>
+<status status="PASS" starttime="20220825 15:42:37.679" endtime="20220825 15:42:54.588"/>
 </suite>
-<status status="FAIL" starttime="20220825 15:23:51.841" endtime="20220825 15:24:08.958"/>
+<status status="PASS" starttime="20220825 15:42:37.672" endtime="20220825 15:42:54.592"/>
 </suite>
-<status status="FAIL" starttime="20220825 15:23:51.834" endtime="20220825 15:24:08.963"/>
+<status status="PASS" starttime="20220825 15:42:37.666" endtime="20220825 15:42:54.596"/>
 </suite>
-<status status="FAIL" starttime="20220825 15:23:51.774" endtime="20220825 15:24:08.967"/>
+<status status="PASS" starttime="20220825 15:42:37.623" endtime="20220825 15:42:54.601"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Robotframework">Robotframework</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1" name="Web-Test">Robotframework.Web-Test</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Tests">Robotframework.Web-Test.Tests</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1" name="Dropdown">Robotframework.Web-Test.Tests.Dropdown</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robotframework">Robotframework</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Web-Test">Robotframework.Web-Test</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Tests">Robotframework.Web-Test.Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="Tables">Robotframework.Web-Test.Tests.Tables</stat>
 </suite>
 </statistics>
 <errors>
