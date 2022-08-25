@@ -1,60 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0 (Python 3.10.6 on win32)" generated="20220824 16:04:47.454" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0 (Python 3.10.6 on win32)" generated="20220825 14:56:22.870" rpa="false" schemaversion="3">
 <suite id="s1" name="Robotframework" source="C:\Users\marco\Documents\GitHub\robotframework">
 <suite id="s1-s1" name="Web-Test" source="C:\Users\marco\Documents\GitHub\robotframework\web-test">
 <suite id="s1-s1-s1" name="Tests" source="C:\Users\marco\Documents\GitHub\robotframework\web-test\tests">
-<suite id="s1-s1-s1-s1" name="Checkbox" source="C:\Users\marco\Documents\GitHub\robotframework\web-test\tests\checkbox.robot">
-<test id="s1-s1-s1-s1-t1" name="Case 2: Acess site" line="16">
+<suite id="s1-s1-s1-s1" name="Radio" source="C:\Users\marco\Documents\GitHub\robotframework\web-test\tests\radio.robot">
+<test id="s1-s1-s1-s1-t1" name="Select radio button" line="10">
 <kw name="New Session" library="base" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${url}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220824 16:04:47.842" level="INFO">Opening browser 'chrome' to base url 'https://training-wheels-protocol.herokuapp.com'.</msg>
-<status status="PASS" starttime="20220824 16:04:47.841" endtime="20220824 16:04:54.477"/>
+<msg timestamp="20220825 14:56:23.324" level="INFO">Opening browser 'chrome' to base url 'https://training-wheels-protocol.herokuapp.com'.</msg>
+<status status="PASS" starttime="20220825 14:56:23.323" endtime="20220825 14:56:34.230"/>
 </kw>
-<status status="PASS" starttime="20220824 16:04:47.840" endtime="20220824 16:04:54.478"/>
+<status status="PASS" starttime="20220825 14:56:23.322" endtime="20220825 14:56:34.231"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
-<arg>${url}/checkboxes</arg>
+<arg>${url}/radios</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220824 16:04:54.480" level="INFO">Opening url 'https://training-wheels-protocol.herokuapp.com/checkboxes'</msg>
-<status status="PASS" starttime="20220824 16:04:54.479" endtime="20220824 16:04:54.853"/>
+<msg timestamp="20220825 14:56:34.235" level="INFO">Opening url 'https://training-wheels-protocol.herokuapp.com/radios'</msg>
+<status status="PASS" starttime="20220825 14:56:34.233" endtime="20220825 14:56:35.741"/>
 </kw>
-<kw name="Select Checkbox" library="SeleniumLibrary">
-<arg>css:input[value='iron-man']</arg>
-<doc>Selects the checkbox identified by ``locator``.</doc>
-<msg timestamp="20220824 16:04:54.855" level="INFO">Selecting checkbox 'css:input[value='iron-man']'.</msg>
-<status status="PASS" starttime="20220824 16:04:54.854" endtime="20220824 16:04:54.961"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="cap"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220825 14:56:35.744" level="INFO">Clicking element '//*[@id="cap"]'.</msg>
+<status status="PASS" starttime="20220825 14:56:35.742" endtime="20220825 14:56:35.810"/>
 </kw>
-<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
-<arg>css:input[value='iron-man']</arg>
-<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
-<msg timestamp="20220824 16:04:54.963" level="INFO">Verifying checkbox 'css:input[value='iron-man']' is selected.</msg>
-<status status="PASS" starttime="20220824 16:04:54.962" endtime="20220824 16:04:55.008"/>
+<kw name="Radio Button Should Be Set To" library="SeleniumLibrary">
+<arg>movies</arg>
+<arg>cap</arg>
+<doc>Verifies radio button group ``group_name`` is set to ``value``.</doc>
+<msg timestamp="20220825 14:56:35.812" level="INFO">Verifying radio button 'movies' has selection 'cap'.</msg>
+<status status="PASS" starttime="20220825 14:56:35.811" endtime="20220825 14:56:35.928"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
-<arg>3</arg>
+<arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220824 16:04:58.017" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20220824 16:04:55.009" endtime="20220824 16:04:58.020"/>
+<msg timestamp="20220825 14:56:40.934" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220825 14:56:35.929" endtime="20220825 14:56:40.936"/>
 </kw>
 <kw name="End Session" library="base" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220825 14:56:41.074" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-18.png"&gt;&lt;img src="selenium-screenshot-18.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220825 14:56:40.938" endtime="20220825 14:56:41.076"/>
+</kw>
 <kw name="Close All Browsers" library="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220824 16:04:58.022" endtime="20220824 16:05:00.258"/>
+<status status="PASS" starttime="20220825 14:56:41.076" endtime="20220825 14:56:43.454"/>
 </kw>
-<status status="PASS" starttime="20220824 16:04:58.021" endtime="20220824 16:05:00.259"/>
+<status status="PASS" starttime="20220825 14:56:40.937" endtime="20220825 14:56:43.455"/>
 </kw>
-<status status="PASS" starttime="20220824 16:04:47.837" endtime="20220824 16:05:00.259"/>
+<status status="PASS" starttime="20220825 14:56:23.319" endtime="20220825 14:56:43.455"/>
 </test>
-<status status="PASS" starttime="20220824 16:04:47.511" endtime="20220824 16:05:00.262"/>
+<status status="PASS" starttime="20220825 14:56:22.936" endtime="20220825 14:56:43.458"/>
 </suite>
-<status status="PASS" starttime="20220824 16:04:47.505" endtime="20220824 16:05:00.267"/>
+<status status="PASS" starttime="20220825 14:56:22.928" endtime="20220825 14:56:43.463"/>
 </suite>
-<status status="PASS" starttime="20220824 16:04:47.497" endtime="20220824 16:05:00.272"/>
+<status status="PASS" starttime="20220825 14:56:22.920" endtime="20220825 14:56:43.468"/>
 </suite>
-<status status="PASS" starttime="20220824 16:04:47.461" endtime="20220824 16:05:00.276"/>
+<status status="PASS" starttime="20220825 14:56:22.878" endtime="20220825 14:56:43.473"/>
 </suite>
 <statistics>
 <total>
@@ -66,7 +72,7 @@
 <stat pass="1" fail="0" skip="0" id="s1" name="Robotframework">Robotframework</stat>
 <stat pass="1" fail="0" skip="0" id="s1-s1" name="Web-Test">Robotframework.Web-Test</stat>
 <stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Tests">Robotframework.Web-Test.Tests</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="Checkbox">Robotframework.Web-Test.Tests.Checkbox</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="Radio">Robotframework.Web-Test.Tests.Radio</stat>
 </suite>
 </statistics>
 <errors>
